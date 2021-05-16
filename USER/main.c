@@ -87,6 +87,25 @@ void Gps_Msg_Show(void)
 				u3_printf("Over\n");
 }
 
+void AT_back(void)
+{
+	u8 i=0;
+	delay_ms(200);
+	if(USART2_RX_STA&0x8000)    //AT接收到数据并返回
+		{				
+			USART2_RX_STA&=0x7FFF;
+			i=0;
+			while(USART2_RX_STA--)
+			{
+				USART_SendData(USART3, USART2_RX_BUF[i++]);         
+				while(USART_GetFlagStatus(USART3,USART_FLAG_TC)!=SET);
+			}
+			//printf("*\n");
+			u3_printf("\n");
+			USART2_RX_STA=0;
+		}
+}
+
 
 int main(void)
  {		
@@ -97,7 +116,18 @@ int main(void)
 	u16 lenx;
 	 u16 gpsnumber=0;
 	 //float tp;	
-	 //char temp[50];
+	 char temp[60];
+	 char temp3[60];
+	 char send1[10] = "AT\r\n";
+	 char send2[10] = "AT+CSQ\r\n";
+	 char send3[70] = "AT+MQTTCFG=\"39.106.166.6\",1883,\"mqttjs_id007\",60,\"admin\",\"123456\",1\r\n";
+	 char send4[20] = "AT+MQTTCFG?\r\n";
+	 char send5[30] = "AT+MQTTOPEN=1,1,0,0,0,\"\",\"\"\r\n";
+	 char send6[20] = "AT+MQTTSTAT?\r\n";
+	 char send7[50] = "AT+MQTTPUB=\"test_mqtt\",2,1,0,0,\"update message\"\r\n";
+	 char send8[60] = "AT+MQTTPUB=\"test_mqtt\",2,1,0,0,\"update message222\"\r\n";
+	 char send9[10] = "AT\r\n";
+	 char send10[10] = "AT\r\n";
 	
 	 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置中断优先级分组为组2：2位抢占优先级，2位响应优先级
@@ -106,16 +136,90 @@ int main(void)
 	 uart_init(9600);
 	 usart3_init(9600);
 	 usart2_init(9600);
-	 printf("1-u1");
-	 u3_printf("1-u3");
-	 u2_printf("123-u2");
+	 printf("1-u1\n");
+	 u3_printf("1+u3\n");
+	 //u2_printf("123-u2");
 	 LED_Init(); 
+	 //delay_ms(800);
 	 LED0=0; 
+	 u3_printf(send2);
+	 
+
+	 u2_printf(send1);
+	 
+	 delay_ms(800);
+		AT_back();
+		u3_printf(send1);//发送接收到的数据到串口1
+	  u3_printf("over");//over测试
+
+
+	 u2_printf(send2);
+		//delay_ms(800);
+	 
+	 delay_ms(800);
+		AT_back();
+		u3_printf(send2);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+//	 u2_printf("AT+CSQ\r\n");
+//	 u3_printf("AT+CSQ\r\n");
+//	 delay_ms(100);
+		
+
+	 u2_printf(send3);
+		delay_ms(500);
+				AT_back();
+	 u3_printf(send3);//发送接收到的数据到串口1
+				u3_printf("over");//over测试
+		//delay_ms(200);
+
+	 
+		u3_printf("start");//start测试;	
+	 u2_printf(send4);
+		delay_ms(500);
+				AT_back();
+	 u3_printf(send4);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+		//delay_ms(200);
+	 
+		u3_printf("start");//start测试
+	 u2_printf(send5);
+		delay_ms(500);	
+				AT_back();
+	 u3_printf(send5);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+		//delay_ms(200);
+	 
+		u3_printf("start");//start测试	
+	 u2_printf(send6);
+		delay_ms(500);
+				AT_back();
+	 u3_printf(send6);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+		//delay_ms(200);
+	 
+		u3_printf("start");//start测试
+	 u2_printf(send7);
+		delay_ms(500);
+				AT_back();
+	 u3_printf(send7);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+		//delay_ms(200);
+
+		u3_printf("start");//start测试
+	 u2_printf(send8);
+		delay_ms(500);
+				AT_back();
+	 u3_printf(send8);//发送接收到的数据到串口1
+		u3_printf("over");//over测试
+		//delay_ms(200);
+
 
 //	 
   while(1)
 	{
 		delay_ms(1);
+		
+		
 		if(USART_RX_STA&0x8000)		//接收到一次数据了
 		{
 			rxlen=USART_RX_STA&0x7FFF;	//得到数据长度
@@ -172,6 +276,21 @@ int main(void)
 //			printf("*\n");
 //			USART_RX_STA=0;
 //		}
+
+//		if(USART2_RX_STA&0x8000)    //AT接收到数据并返回
+//		{				
+//			USART2_RX_STA&=0x7FFF;
+//			i=0;
+//			while(USART2_RX_STA--)
+//			{
+//				USART_SendData(USART2, USART2_RX_BUF[i++]);         
+//				while(USART_GetFlagStatus(USART2,USART_FLAG_TC)!=SET);
+//			}
+//			//printf("*\n");
+//			u3_printf("2*\n");
+//			USART2_RX_STA=0;
+//		}
+		
 		if(USART3_RX_STA&0x8000)    //接收到数据并返回
 		{				
 			USART3_RX_STA&=0x7FFF;
@@ -185,19 +304,7 @@ int main(void)
 			u3_printf("3*\n");
 			USART3_RX_STA=0;
 		}
-		if(USART2_RX_STA&0x8000)    //接收到数据并返回
-		{				
-			USART2_RX_STA&=0x7FFF;
-			i=0;
-			while(USART2_RX_STA--)
-			{
-				USART_SendData(USART2, USART2_RX_BUF[i++]);         
-				while(USART_GetFlagStatus(USART2,USART_FLAG_TC)!=SET);
-			}
-			//printf("*\n");
-			u3_printf("2*\n");
-			USART2_RX_STA=0;
-		}
+		
 		//delay_ms(3000);
 		if((lenx%300)==0)LED0=!LED0; 	    				 
 		lenx++;	
