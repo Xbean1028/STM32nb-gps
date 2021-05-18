@@ -1,5 +1,5 @@
 Dependencies for Project 'Template', Target 'Template': (DO NOT MODIFY !)
-F (.\main.c)(0x60A0CAAC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x60A3AC4D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\SYSTEM\sys\sys.h)(0x550F951C)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -30,7 +30,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\SYSTEM\delay\delay.h)(0x555AC82C)
-I (..\SYSTEM\usart\usart.h)(0x50517A82)
+I (..\SYSTEM\usart\usart.h)(0x60A33FE4)
 I (D:\software\kile5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\HARDWARE\USART3\usart3.h)(0x554197DC)
 I (..\HARDWARE\USART2\usart2.h)(0x5C9CCC56)
@@ -228,7 +228,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-F (..\SYSTEM\usart\usart.c)(0x5C9CC770)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
+F (..\SYSTEM\usart\usart.c)(0x60A39D34)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
 I (..\SYSTEM\sys\sys.h)(0x550F951C)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -258,7 +258,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-I (..\SYSTEM\usart\usart.h)(0x50517A82)
+I (..\SYSTEM\usart\usart.h)(0x60A33FE4)
 I (D:\software\kile5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 F (..\HARDWARE\USART3\usart3.c)(0x5C9CC9F8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart3.o --omf_browse ..\obj\usart3.crf --depend ..\obj\usart3.d)
 I (..\SYSTEM\delay\delay.h)(0x555AC82C)
@@ -295,7 +295,7 @@ I (..\HARDWARE\USART3\usart3.h)(0x554197DC)
 I (D:\software\kile5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\software\kile5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\software\kile5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\HARDWARE\USART2\usart2.c)(0x5C9CCB90)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2.o --omf_browse ..\obj\usart2.crf --depend ..\obj\usart2.d)
+F (..\HARDWARE\USART2\usart2.c)(0x60A355A6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CORE -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\USART3 -I ..\HARDWARE\USART2-I.\RTE\_Template-ID:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\software\kile5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart2.o --omf_browse ..\obj\usart2.crf --depend ..\obj\usart2.d)
 I (..\SYSTEM\delay\delay.h)(0x555AC82C)
 I (..\SYSTEM\sys\sys.h)(0x550F951C)
 I (..\USER\stm32f10x.h)(0x4D783CB4)

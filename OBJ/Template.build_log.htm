@@ -21,39 +21,37 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
 Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
-H:\project\NBmap\danpiaji\开发板测试\ttl串口\USER\Template.uvprojx
+H:\project\NBmap\danpiaji\开发板测试\ttl串口 - 副本\USER\Template.uvprojx
 Project File Date:  05/15/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\software\kile5\ARM\ARMCC\Bin'
 Build target 'Template'
 compiling main.c...
-main.c(113): warning:  #177-D: variable "key"  was declared but never referenced
-  	 u8 key=0XFF;
-main.c(114): warning:  #177-D: variable "upload"  was declared but never referenced
-  	u8 upload=0;	
-main.c(115): warning:  #550-D: variable "rxlen"  was set but never used
+main.c(96): warning:  #177-D: variable "inrxlen"  was declared but never referenced
+  	u16 inrxlen;
+main.c(122): warning:  #177-D: variable "time"  was declared but never referenced
+  	float wei,jing,time;
+main.c(159): warning:  #177-D: variable "send8"  was declared but never referenced
+  	 u8 send8[60] = "AT+MQTTPUB=\"test_mqtt\",2,1,0,0,\"update message222\"\r\n";
+main.c(229): warning:  #177-D: variable "rxlen"  was declared but never referenced
   	 u16 rxlen;
-main.c(119): warning:  #177-D: variable "temp"  was declared but never referenced
-  	 char temp[60];
-main.c(120): warning:  #177-D: variable "temp3"  was declared but never referenced
-  	 char temp3[60];
-main.c(129): warning:  #177-D: variable "send9"  was declared but never referenced
-  	 char send9[10] = "AT\r\n";
-main.c(130): warning:  #177-D: variable "send10"  was declared but never referenced
-  	 char send10[10] = "AT\r\n";
-main.c: 7 warnings, 0 errors
+main.c(234): warning:  #177-D: variable "TEMP_BUF"  was declared but never referenced
+  	 u8  TEMP_BUF[USART_REC_LEN];
+main.c(235): warning:  #177-D: variable "temp"  was declared but never referenced
+     char temp[100];	 
+main.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=13904 RO-data=1092 RW-data=72 ZI-data=4992  
+Program Size: Code=13692 RO-data=1148 RW-data=56 ZI-data=5392  
 FromELF: creating hex file...
-"..\OBJ\Template.axf" - 0 Error(s), 7 Warning(s).
+"..\OBJ\Template.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_Template
   D:\software\kile5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

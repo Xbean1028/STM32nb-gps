@@ -45,14 +45,14 @@ struct __FILE
 
 FILE __stdout;       
 //定义_sys_exit()以避免使用半主机模式    
-_sys_exit(int x) 
+int _sys_exit(int x) 
 { 
 	x = x; 
 } 
 //重定义fputc函数 
 int fputc(int ch, FILE *f)
 {      
-	while((USART1->SR&0X40)==0);//循环发送,直到发送完毕   
+	while((USART1->SR&0X40)==0)//循环发送,直到发送完毕   
     USART1->DR = (u8) ch;      
 	return ch;
 }
@@ -107,7 +107,7 @@ void uart_init(u32 bound){
 
   //Usart1 NVIC 配置
   NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=3 ;//抢占优先级3
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=2;//抢占优先级3  bean改了3-1
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;		//子优先级3
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			//IRQ通道使能
 	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
